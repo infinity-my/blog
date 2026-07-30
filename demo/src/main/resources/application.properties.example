@@ -1,0 +1,28 @@
+spring.application.name=web-blog-api
+
+# H2 Database (Development)
+spring.datasource.url=jdbc:h2:mem:blogdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# JPA
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=true
+
+# H2 Console
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# JWT Configuration (请替换为随机生成的密钥)
+jwt.secret=YOUR_JWT_SECRET_HERE
+jwt.expiration=86400000
+
+# File Upload
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=10MB
+
+# DeepSeek LLM (请替换为你的 API Key)
+llm.deepseek.url=https://api.deepseek.com/v1/chat/completions
+llm.deepseek.key=YOUR_DEEPSEEK_API_KEY_HERE
+llm.deepseek.model=deepseek-chat
